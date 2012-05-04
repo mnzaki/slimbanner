@@ -1,5 +1,14 @@
--- MNZ22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!
-main=putStr(w s t)
-w p q = q ++ show p ++ "\nt = " ++ show q ++ "\n"
-s = "-- MNZ22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!\nmain=putStr(w s t)\nw p q = q ++ show p ++ \"\\nt = \" ++ show q ++ \"\\n\"\ns = "
-t = "-- 22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!22-METsaysTHANKs!\nmain=putStr(w s t)\nw p q = p ++ show p ++ \"\\nt = \" ++ show q ++ \"\\n\"\ns = "
+-- Professor Doctor
+--
+--   22-METsaysTHANKS!   22-MET    says
+-- THANKS!22-MET         says     THANKS!
+--22-MET                 says     THANKS!
+-- 22-MET                says               THANKS!22-METsays
+--  THANKS!              22-M     ETsays    THANKS!22-METsays
+--   THANKS!22-          METs     aysTHA    NKS!  22-M  ETsay
+--    sTHANKS!22-        METs     aysTHA    NKS!  22-M  ETsay
+--     sTHANKS!22-M      ETsa     ysTHAN    KS!2  2-ME  Tsays
+--    THANKS!22-MET      says     THANKS    !22-  METs  aysTH
+--ANKS!22-METsays       THANKS!   22-MET    says  THAN  KS!!!!!!!
+-----------------------------------------------------------------
+main=putStr(w s t);w p q = q ++ show p ++ ";t = " ++ show q ++ "\n";s = "-- Professor Doctor\n--\n--   22-METsaysTHANKS!   22-MET    says\n-- THANKS!22-MET         says     THANKS!\n--22-MET                 says     THANKS!\n-- 22-MET                says               THANKS!22-METsays\n--  THANKS!              22-M     ETsays    THANKS!22-METsays\n--   THANKS!22-          METs     aysTHA    NKS!  22-M  ETsay\n--    sTHANKS!22-        METs     aysTHA    NKS!  22-M  ETsay\n--     sTHANKS!22-M      ETsa     ysTHAN    KS!2  2-ME  Tsays\n--    THANKS!22-MET      says     THANKS    !22-  METs  aysTH\n--ANKS!22-METsays       THANKS!   22-MET    says  THAN  KS!!!!!!!\n-----------------------------------------------------------------\nmain=putStr(w s t);w p q = q ++ show p ++ \";t = \" ++ show q ++ \"\\n\";s = ";t = "-- 22-MET Says\n--\n-- 22-METsaysTHANKS!    22-MET    says    THANKS!      22-MET\n-- saysTHANKS!22-MET    saysTH    ANKS      !22-MET   says\n--     THANKS!          22-MET    says        THANKS! 22-\n--     METsays          THANKS!!!!22-M           ETsays\n--     THANKS!          22-METsaysTHAN        KS!22-  MET\n--     saysTHA          NKS!22    -MET     saysTH     ANKS!22-\n--    METsaysTH        ANKS!22-  METsay  sTHANKS!!   22-METsaysTHANKS!!\n-----------------------------------------------------------------\nmain=putStr(w s t);w p q = p ++ show p ++ \";t = \" ++ show q ++ \"\\n\";s = "
