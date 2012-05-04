@@ -4,46 +4,61 @@ public class SlimBanner {
     public static void main(String[]a) throws Exception {
 
 int d[]={0xf,0xc000fb6,                                          0xc183f,0xc60dbff3,
-0xe6dff8fb,   0x6ccc0db6,                                       0x667edb33,      0x0},
+0xe6dff8fb,   0x6ccc0db6,                                       0x667edb33,     0x0},
 w=100,h=40,      dw=25,dh                                       =10,l=0,i,
-j,p,zc=500;     String f=  "22-METsaysTHANKS!",                 b,z="";
+j,p,zc=500;     String f=  "22-METsaysTHANKS!",                 b,z="";//
 boolean/**/     v=true;     while(zc-->0)z+="\n";               for(b=z;;
 System.out.print(b),        Thread.              sleep(2000),   v=!v,b=z)
 for(i=0;                    i<h;i++          ,b+='\n'     )for  (j=0;j<w;j++){p
 =i*dh/h                     *dw+j*           dw/(w+1       );b  += (((d[p/32]//
 &(1L<<(31                   -(p%32)          )))>0)        ^v)  ?' ':f.
 charAt/**/                  (l++);l           %=f./*      **/   length();
-}/*Profess                  orrrrrr             Doctor ><><>    Slim*A*/
+}/*Profess                  orrrrrr             Doctor<><><>    Slim*A*/
 
     }
 }
 
 ----------------------------- C Version ---------------------------------------
 
-#define w 100                       
-#define h 40                       
+#define w 100
+#define h 40
 #ifdef _WIN32
 #include <windows.h>
 #define sleep(n) Sleep(n*1000)
 #endif
 
-      void main(){         int dw                       
-     =25,dh=10,l=0         ,i,j,p                       
+       void main(){        int dw
+     =25,dh=10,l=0         ,i,j,p
    ,v=0,zc=                500,d[]
    ={0xf,            /**/            0xc000fb6,0xc183f,
   /*\|/*/            /**/           0xc60dbff3,0xe6dff8fb,
   /*/|\*/            /**/           0x6ccc0db6,0x667edb33,
-  0x0};char          f[]=  "22-M"  "ETsaysTHANKS!"//:D?// 
+  0x0};char          f[]=  "22-M"  "ETsaysTHANKS!"//:D?//
   ,z[500+(/**/       w+1)  *h],*    b=z+500;while(zc--)z
    [zc]='\n';        for(  ;;/**/   write(1,z,(w+1)*h),//
-   v=!v,sleep(2))    for(  i=0;i    <h;i    ++)     for(j 
-     =0;j<w;j++,b    [i*(  w+1)+    j ]=    '\n'    ){p// 
-           =i*dh/h*  dw+j  *dw/     (w+1    );b     [i/// 
+   v=!v,sleep(2))    for(  i=0;i    <h;i    ++)     for(j
+     =0;j<w;j++,b    [i*(  w+1)+    j ]=    '\n'    ){p//
+           =i*dh/h*  dw+j  *dw/     (w+1    );b     [i///
            *(w+1)+j  ]=((  (d[p     /32]    &(1L    <<//4
-   (sizeof(int)*8    -(p%  32)-1    )))>    0)^v    )//42 
-   ?' ':f[l++];l     %=    sizeof   (f)-    1;}}    /*MNZ*/ 
+   (sizeof(int)*8    -(p%  32)-1    )))>    0)^v    )//42
+   ?' ':f[l++];l     %=    sizeof   (f)-    1;}}    //_\\
 
 
------------------------------- Prolog --------------------------------------------
+------------------------------ Prolog Version ------------------------------------
 
+f("22-METsaysTHANKS!").
+ set(N,X):-X1 is X>>N, 1 is X1      /\1. d(MW   ,MW,H,/**/    MH,WR,HR,    B,X,F,V,
+ ['\n'|R]):-!,H1 is H+  1,d(0,       MW,H1,MH    ,WR,HR,B,    X,F,V,R      ). d(R,S,
+ LL,LL,I,M,A,B,D, E,[]  ):- !.       d(W,MW,H,      MH,WR,HR ,B,X,[        F|Fs],V,
+ [C|R]):-P is B-(H*HR   //MH *       WR+W*WR//         MW) ,W1 is          W+1,(%%
+      set(P,X)->V1      =1;V1=0),(V1 xor V=:=1          ->C=F,d(            W1,MW,%
+      H,MH,WR,HR,B      ,X,Fs,V,R);C=' ',d(W1,         MW,H,MH,WR,          HR,B,X,
+      [F|Fs],V,R))      . r(0,_,      []):-! .       r(N,A,  [A|Fs])        :-N1 is
+      N-1,r(N1,A,       Fs). s_(      W,H, DW,      DH,V,X)    :-f(A),       length(
+      A,L),N is W       *H//L+1       ,r(500 ,    '\n',Z1),     flatten(      Z1,Z),
+      r(N, A, F1),      flatten(      F1,F), B   is DW*DH-1     ,d(0,W,0,H,
+      DW,DH,B,X,F,      V,R),/*      */writef(  "%s%s\n",[Z      ,R]),/*42*/  sleep(2),
+      (V =1->V1=0;     V1=1),s_(     W,H,DW,DH,/*For*The**      *[Patience]*/   V1,X).
+
+slimbanner:- s_(100,40,25,10,0,0x40000003c30003ed8003060ff1836ffcf9b7fe3edb33036d999fb6ccc000000).
 
