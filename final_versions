@@ -65,16 +65,22 @@ slimbanner:- s_(100,40,25,10,0,0x40000003c30003ed8003060ff1836ffcf9b7fe3edb33036
 -------------------------------- Haskell Quine ------------------------------------
 
 import Data.Bits
-d="[0x4000000fd9b1a7ecd8d0c666c863f1c431f8e218ccd90c66ee0633634000000,"++
-   "0x4000000f8001c66001b31000898aee40cdcdb87cc4503063681830e40000000,"++
-   "0x40000003c30003ed8003060ff1836ffcf9b7fe3edb33036d999fb6ccc000000]"
-f="22-METsaysTHANKS!";s=0;a w h dw dh=zipWith(t w h dw dh)[(x,y)|y<-[0..h-1],x<-[0..w]]$cycle f;
-t w h dw dh(x,y)c|x==w='\n'|testBit((read d::[Integer])!!mod s 3)(dw*dh-1-x*dw`div`(w+1)-y*dh`div`h*dw)=c
- |otherwise=' ';c1="import Data.Bits\n";c2=";a w h dw dh=zipWith(t w h dw dh)[(x,y)|y<-[0..h-1],x<-"++
- "[0..w]]$cycle f;\nt w h dw dh(x,y)c|x==w='\\n'|testBit((read d::[Integer])!!mod s 3)(dw*dh-1-x*dw"++
- "`div`(w+1)-y*dh`div`h*dw)=c\n |otherwise=' ';c1=";main=putStrLn$((\x->"{-"++x++x++a 100 40 25 10++x++
- " Run Me ;) "++x++"-}\n"++c1++"d="++show d++"\nf="++show f++";s="++show(s+1)++c2++show c1++";c2="++show
- c2++c3++show c3)$replicate 45'-');c3=";main=putStrLn$((\\x->\"{-\"++x++x++a 100 40 25 10++x++\" Run "++
- "Me ;) \"++x++\"-}\\n\"++c1++\"d=\"++show d++\"\\nf=\"++show f++\";s=\"++show(s+1)++c2++show c1++\";"++
- "c2=\"++show c2++c3++show c3)$replicate 45'-');c3="
+d=[1809251421040881223578526132356212744386171840748677712684849289234581815296,
+   1809251420450559521827699622364399252817399751885605202647537205873328783360,
+   1809251400671549502771212599041018465181633543326290321054940158599106658304]
+   ::[Integer];f="22-METsaysTHANKS!";o n x="\nc"++show n++"="++show x;a w h dw
+   dh=zipWith(t w h dw dh)[(x,y)|y<-[0..h-1],x<-[0..w]]$cycle f;t w h dw dh(x,y)c
+   |x==w='\n'|testBit(d!!0)(dw*dh-1-x*dw`div`(w+1)-y*dh`div`h*dw)=c|otherwise=' ';
+   main=putStrLn$((\x->"{-"++x++x++a 100 40 25 10++x++" Run Me ;) "++x++"-}\n"++c1
+   ++"d=["++show(d!!1)++",\n   "++show(d!!2)++",\n   "++show (d!!0)++
+   "]\n   ::[Integer];f="++show f++c2++c3++c4++c5++c6++c7++c8++(concat.zipWith o[1
+   ..8]$[c1,c2,c3,c4,c5,c6,c7,c8]))$replicate 42'-')
+c1="import Data.Bits\n"
+c2=";o n x=\"\\nc\"++show n++\"=\"++show x;a w h dw\n   dh=zipWith(t w h dw dh)[("
+c3="x,y)|y<-[0..h-1],x<-[0..w]]$cycle f;t w h dw dh(x,y)c\n   |x==w='\\n'|testBit"
+c4="(d!!0)(dw*dh-1-x*dw`div`(w+1)-y*dh`div`h*dw)=c|otherwise=' ';\n   main=putStr"
+c5="Ln$((\\x->\"{-\"++x++x++a 100 40 25 10++x++\" Run Me ;) \"++x++\"-}\\n\"++c1"
+c6="\n   ++\"d=[\"++show(d!!1)++\",\\n   \"++show(d!!2)++\",\\n   \"++show (d!!0)"
+c7="++\n   \"]\\n   ::[Integer];f=\"++show f++c2++c3++c4++c5++c6++c7++c8++(concat"
+c8=".zipWith o[1\n   ..8]$[c1,c2,c3,c4,c5,c6,c7,c8]))$replicate 42'-')"
 
