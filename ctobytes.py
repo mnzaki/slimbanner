@@ -18,7 +18,7 @@ while i < w*h:
     print data[i:i+w]
     i = i+w
 
-print "One Hexadecimal Integer: %x" % int(data, 2)
+print "One Hexadecimal Integer: %x" % int("1"+data, 2)
 i = 0
 maxi = w * h
 buf = ""
